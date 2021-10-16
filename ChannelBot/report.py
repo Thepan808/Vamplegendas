@@ -4,16 +4,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.regex(r'^Report a Problem$') | filters.command('report'))
 async def _manage(_, msg):
-    how = '**Report a Problem** \n\n'
-    how += "If something **unexpected** happens, you can report it to us. (You can also suggest features.)\n\n"
-    how += '**Steps** \n'
-    how += '1) Try whatever you did again. If it shows the same unexpected thing, move to step 2 \n'
-    how += '2) Visit @StarkBotsChat and define your problem **completely**, i.e, what you expected and what happened instead.'
-    how += "If you don't get a reply, tag an admin."
+    how = '**Reportar o Problema** \n\n'
+    how += "Se caso algo acontecer, ou não sabe oque está fazendo **Doido da cabeça** bom, me comunique\n\n"
+    how += '**Próximo passo** \n'
+    how += '1) Tente o que você fez novamente. Se mostrar a mesma coisa inesperada, vá para a etapa 2 \n'
+    how += '2) Entre em contato com @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx e define seu problema **completamente** Bom, aguardo e espero que te ajude.'
+    how += "♦️ Boa sorte ♦️."
     await msg.reply(
         how,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('Support Group', url='https://t.me/StarkBotsChat')]
+            [InlineKeyboardButton('Grupo de Suporte', url='https://t.me/blazer808_Stay')]
         ]),
         quote=True
     )
