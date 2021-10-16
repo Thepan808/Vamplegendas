@@ -15,12 +15,12 @@ async def start(bot, msg):
 	)
 	await bot.send_message(
 		msg.chat.id,
-		'Use below buttons to interact with me',
+		'♦️ Use os botões abaixo para interagir comigo ♦️',
 		reply_markup=ReplyKeyboardMarkup(
 			[
-				['+ Add Channels +'],
-				['Manage Channels'],
-				['Report a Problem']
+				['♦️ Adicionar Chanais ♦️'],
+				['♦️ Gerenciar Chanais ♦️'],
+				['♦️ Reportar o Problema ♦️']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
