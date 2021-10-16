@@ -18,9 +18,9 @@ async def start(bot, msg):
 		'♦️ Use os botões abaixo para interagir comigo ♦️',
 		reply_markup=ReplyKeyboardMarkup(
 			[
-				['♦️ Adicionar Chanais ♦️'],
-				['♦️ Gerenciar Chanais ♦️'],
-				['♦️ Reportar o Problema ♦️']
+				['+ Add Channels +'],
+				['Manage Channels'],
+				['Report a Problem']
 			],
 			one_time_keyboard=True,
 			resize_keyboard=True
