@@ -32,7 +32,7 @@ By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     # Help Message
     HELP = """
 ♦️ Bom a forma mais fácil de me usar ♦️.
-♦️ Para me adicionar no seu canal, use o botão 'Add Channels' ou, use `/add` comando. ♦️
+♦️ Para me adicionar no seu canal, use o botão 'Adicionar o Canal' ou, use `/add` comando. ♦️
 
 ♦️ **Comandos do bot** ♦️
 
