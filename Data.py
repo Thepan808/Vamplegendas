@@ -4,59 +4,59 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-Hey {}
+♦️ Olá {}
 
-Welcome to {}
+♦️ Bem vindo ao {}
 
-You can use me to manage channels with tons of features. Use below buttons to learn more !
+♦️ Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou🧐!
 
-By @StarkBots
+By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text="🏠 Return Home 🏠", callback_data="home")],
+        [InlineKeyboardButton(text="♦️ Voltar", callback_data="home")],
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("✨ Bot Status and More Bots ✨", url="https://t.me/StarkBots/7")],
+        [InlineKeyboardButton("♦️ Criador ♦️", url="https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx")],
         [
-            InlineKeyboardButton("How to Use ❔", callback_data="help"),
-            InlineKeyboardButton("🎪 About 🎪", callback_data="about")
+            InlineKeyboardButton("♦️ Quer saber como me usar❔ ♦️", callback_data="help"),
+            InlineKeyboardButton("♦️ Sobre ♦️", callback_data="about")
         ],
-        [InlineKeyboardButton("♥ More Amazing bots ♥", url="https://t.me/StarkBots")],
-        [InlineKeyboardButton("🎨 Support Group 🎨", url="https://t.me/StarkBotsChat")],
+        [InlineKeyboardButton("♥ Canal ♥", url="https://t.me/GR4V3_S4D_CRAZZY")],
+        [InlineKeyboardButton("♦️ Grupo ♦️", url="https://t.me/blazer808_Stay")],
     ]
 
     # Help Message
     HELP = """
-Everything is self explanatory after you add a channel.
-To add a channel use keyboard button 'Add Channels' or alternatively for ease, use `/add` command
+♦️ Bom a forma mais fácil de me usar ♦️.
+♦️ Para me adicionar no seu canal, use o botão 'Add Channels' ou, use `/add` comando. ♦️
 
-✨ **Available Commands** ✨
+♦️ **Comandos do bot** ♦️
 
-/about - About The Bot
-/help - This Message
-/start - Start the Bot
+/about - Sobre o Bot
+/help - Mensagem de ajuda
+/start - Iniciar o bot
 
-Alternative Commands
-/channels - List added Channels
-/add - Add a channel
-/report - Report a Problem
+♦️ Comandos Alternativos ♦️
+/channels - Lista de canais que você adicinou
+/add - Adicionar ao canal
+/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     """
 
     # About Message
     ABOUT = """
-**About This Bot** 
+**Sobre o bot** 
 
-A telegram channel automation bot by @StarkBots
+♦️ Bot que legenda  automaticamente nos canais. By: Baianor. 
 
-Source Code : [Click Here](https://github.com/StarkBotsIndustries/ChannelBot)
+Baianor : [Criador](https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx)
 
 Framework : [Pyrogram](docs.pyrogram.org)
 
-Language : [Python](www.python.org)
+Linguagem : [Python](www.python.org)
 
-Developer : @StarkProgrammer
+Desenvolvedor : @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     """
