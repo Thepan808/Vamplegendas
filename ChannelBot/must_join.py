@@ -19,10 +19,10 @@ async def must_join_channel(bot: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"Opa fela, entre no canal [♦️ Canal ♦️]({link}) Para me usar. Se eu te ajudo com o bot, você tem que retribuir entrando ao canal!",
+                    f"Opa fela, entre no canal [♦️ Canal ♦️](t.me/GR4V3_S4D_CRAZZY) Para me usar. Se eu te ajudo com o bot, você tem que retribuir entrando ao canal!",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("♦️ Entre ao Canal ♦️", url=link)]
+                        [InlineKeyboardButton("♦️ Entre ao Canal ♦️", url=https://t.me/GR4V3_S4D_CRAZZY
                     ])
                 )
                 await msg.stop_propagation()
