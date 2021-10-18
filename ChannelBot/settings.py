@@ -47,8 +47,8 @@ async def channel_settings(channel_id, bot):
                 InlineKeyboardButton(f'{emoji.LINK}Buttons', callback_data=f'change+buttons+{channel_id}')
             ],
             [InlineKeyboardButton(f'{emoji.LEAF_FLUTTERING_IN_WIND}Modo Legenda : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
-            [InlineKeyboardButton(f'{emoji.SUNSET}Sticker', callback_data=f'change+sticker+{channel_id}')],
-            [InlineKeyboardButton(f'{emoji.PENCIL}Modo Edit : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
+            [InlineKeyboardButton(f'{emoji.SUNSET}Configurar Sticker', callback_data=f'change+sticker+{channel_id}')],
+            [InlineKeyboardButton(f'{emoji.PENCIL}Modo Editar : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
             [InlineKeyboardButton(f'{emoji.OPEN_BOOK}Webpage Prever : {webpage_preview}', callback_data=f'change+webpage_preview+{channel_id}+{webpage_preview}')],
             [InlineKeyboardButton(f'{emoji.WASTEBASKET}Remover o Canal', callback_data=f'remove+{channel_id}')],
             [InlineKeyboardButton('<-- Voltar', callback_data='home+channels')]
