@@ -22,7 +22,7 @@ async def must_join_channel(bot: Client, msg: Message):
                     f"Opa fela, entre no canal [♦️ Canal ♦️](t.me/GR4V3_S4D_CRAZZY) Para me usar. Se eu te ajudo com o bot, você tem que retribuir entrando ao canal!",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("♦️ Entre ao Canal ♦️", url=https://t.me/GR4V3_S4D_CRAZZY
+                        [InlineKeyboardButton("♦️ Entre ao Canal ♦️", url=https://t.me/GR4V3_S4D_CRAZZY)]
                     ])
                 )
                 await msg.stop_propagation()
