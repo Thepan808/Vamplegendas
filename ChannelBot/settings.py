@@ -43,8 +43,8 @@ async def channel_settings(channel_id, bot):
             webpage_preview = 'False'
         markup = [
             [
-                InlineKeyboardButton(f'{emoji.MEMO}Caption', callback_data=f'change+caption+{channel_id}'),
-                InlineKeyboardButton(f'{emoji.LINK}Buttons', callback_data=f'change+buttons+{channel_id}')
+                InlineKeyboardButton(f'{emoji.MEMO}Legendar', callback_data=f'change+caption+{channel_id}'),
+                InlineKeyboardButton(f'{emoji.LINK}Botões', callback_data=f'change+buttons+{channel_id}')
             ],
             [InlineKeyboardButton(f'{emoji.LEAF_FLUTTERING_IN_WIND}Modo Legenda : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
             [InlineKeyboardButton(f'{emoji.SUNSET}Sticker', callback_data=f'change+sticker+{channel_id}')],
