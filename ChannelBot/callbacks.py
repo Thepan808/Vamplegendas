@@ -108,9 +108,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             elif change == 'buttons':
                 if buttons:
                     _buttons = [
-                        [InlineKeyboardButton('Change URL Buttons', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('Remove URL Buttons', callback_data=f'remove+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Alterar botões de URL', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('Remover botões de URL', callback_data=f'remove+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
                     await callback_query.edit_message_text(f'Current Buttons are : \n\n`{buttons}` \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(_buttons))
                 else:
@@ -150,10 +150,10 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             elif change == 'sticker':
                 if sticker_id:
                     buttons = [
-                        [InlineKeyboardButton('Show Current Sticker', callback_data=f'show+{channel_id}')],
-                        [InlineKeyboardButton('Change Sticker', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('Remove Sticker', callback_data=f'remove+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Mostrar adesivo atual', callback_data=f'show+{channel_id}')],
+                        [InlineKeyboardButton('Alterar adesivo', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('Remover adesivo', callback_data=f'remove+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
                     await callback_query.edit_message_text(f'A sticker is already set. See it by tapping \'Show Current Sticker\' button \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
