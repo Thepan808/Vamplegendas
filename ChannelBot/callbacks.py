@@ -94,9 +94,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             if change == 'caption':
                 if caption:
                     buttons = [
-                        [InlineKeyboardButton('Change Caption', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('Remove Caption', callback_data=f'remove+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Legenda de alteração', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('Remover legenda', callback_data=f'remove+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
                     await callback_query.edit_message_text(f'Current Caption is : \n\n{caption} \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
