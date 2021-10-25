@@ -36,7 +36,7 @@ async def _add_channels(bot: Client, msg):
                                     admin_chat_member = None
                                 if success and admin_chat_member and admin_chat_member.status in ['creator', 'administrator']:  # Already added channel and admin still admin.
                                     admin = await bot.get_users(info['admin_id'])
-                                    text = f"This channel is already added by {admin.mention}"
+                                    text = f"Este canal já é adicionado por {admin.mention}"
                                     await channel.reply(text, quote=True)
                                 else:
                                     await uac(user_id, channel_id)
@@ -56,14 +56,14 @@ async def _add_channels(bot: Client, msg):
                             text = "Sou admin mas não tenho as opções necessárias, como: 'Postar Mensagens' e 'Editar mensagem'. \n\nEnt ademir, encaminha a mensagem do canal de novo ou /cancel o processo."
                             channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id)
                     except (ChatAdminRequired, UserNotParticipant, ChannelPrivate):
-                        text = "I'm still not admin. Please try forwarding again or /cancel the process."
+                        text = "Ainda não sou administrador. Por favor, tente encaminhar novamente ou /cancel o processo."
                         channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id)
                 else:
-                    text = 'This is not a channel message. Please try forwarding again  or /cancel the process.'
+                    text = 'Isto não é uma mensagem de canal. Por favor, tente encaminhar novamente ou /cancel o processo.'
                     channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id)
             else:
                 if channel.text.startswith('/'):
-                    await channel.reply('Cancelado `Adicionar Chanal` o Processo!', quote=True)
+                    await channel.reply('Cancelado ao `Adicionar o Canal` o Processo!', quote=True)
                     break
                 else:
                     text = '♦️ Encaminhe a mensagem do canal ou /cancel pra cancelar o processo.'
