@@ -101,8 +101,8 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     await callback_query.edit_message_text(f'Current Caption is : \n\n{caption} \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
                     buttons = [
-                        [InlineKeyboardButton('Add Caption', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Adicionar Legenda', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- Voltar para inicial', callback_data=f'home+{channel_id}')]
                     ]
                     await callback_query.edit_message_text(f'No Caption set \n\nUse below button to add it.', reply_markup=InlineKeyboardMarkup(buttons))
             elif change == 'buttons':
@@ -115,8 +115,8 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     await callback_query.edit_message_text(f'Current Buttons are : \n\n`{buttons}` \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(_buttons))
                 else:
                     _buttons = [
-                        [InlineKeyboardButton('Add Buttons', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Adicionar Botões', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- Voltar para configuração do canal', callback_data=f'home+{channel_id}')]
                     ]
                     await callback_query.edit_message_text(f'No Buttons set \n\nUse below button to add them.', reply_markup=InlineKeyboardMarkup(_buttons))
             elif change == 'position':
@@ -271,7 +271,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             channel_id = int(args[1])
             await crc(channel_id)
             await urc(user_id, channel_id)
-            await callback_query.answer('Removed Channel Successfully', show_alert=True)
+            await callback_query.answer('Canal removido com sucesso', show_alert=True)
             success, buttons, text = await manage_channels(user_id, bot)
             if success:
                 await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(buttons))
@@ -282,7 +282,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             channel_id = int(args[2])
             if remove == 'caption':
                 await set_caption(channel_id, None)
-                await callback_query.answer('Caption removed successfully !', show_alert=True)
+                await callback_query.answer('Legenda removida com sucesso !', show_alert=True)
                 text, markup, sticker_id = await channel_settings(channel_id, bot)
                 if sticker_id:
                     await callback_query.message.reply_sticker(sticker_id)
@@ -295,7 +295,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     await callback_query.message.delete()
             elif remove == 'buttons':
                 await set_buttons(channel_id, None)
-                await callback_query.answer('Buttons removed successfully !', show_alert=True)
+                await callback_query.answer('Botões removidos com sucesso !', show_alert=True)
                 text, markup, sticker_id = await channel_settings(channel_id, bot)
                 if sticker_id:
                     await callback_query.message.reply_sticker(sticker_id)
@@ -314,7 +314,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 pass
             elif remove == 'sticker':
                 await set_sticker(channel_id, None)
-                await callback_query.answer('Sticker removed successfully !', show_alert=True)
+                await callback_query.answer('Sticker removido com sucesso !', show_alert=True)
                 text, markup, sticker_id = await channel_settings(channel_id, bot)
                 if sticker_id:
                     await callback_query.message.reply_sticker(sticker_id)
