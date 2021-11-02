@@ -4,26 +4,26 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-♦️ Olá {}
+(ಥ﹏ಥ) Olá {}
 
-♦️ Bem vindo ao {}
+(￣▽￣)ノ Bem vindo(a) ao {}
 
-♦️ Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou🧐!
+(⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
 By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text="♦️ Voltar", callback_data="home")],
+        [InlineKeyboardButton(text=":/ Voltar", callback_data="home")],
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("♦️ Criador ♦️", url="https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx")],
+        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx")],
         [
-            InlineKeyboardButton("♦️ Quer saber como me usar❔ ♦️", callback_data="help"),
-            InlineKeyboardButton("♦️ Sobre ♦️", callback_data="about")
+            InlineKeyboardButton("👀 Quer saber como me usar❔ 👀", callback_data="help"),
+            InlineKeyboardButton("💁🏻‍♂️ Sobre 💁🏻‍♂️", callback_data="about")
         ],
         [InlineKeyboardButton("♥ Canal ♥", url="https://t.me/GR4V3_S4D_CRAZZY")],
         [InlineKeyboardButton("♦️ Grupo ♦️", url="https://t.me/blazer808_Stay")],
