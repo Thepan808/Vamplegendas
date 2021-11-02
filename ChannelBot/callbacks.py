@@ -64,7 +64,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="**Here's How to use me**\n" + Data.HELP,
+            text="**Veja como me usar**\n" + Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
@@ -77,7 +77,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await callback_query.message.delete()
             await callback_query.message.reply(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
         else:
-            await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+            await callback_query.answer('Canal não encontrado. Por favor, adicione novamente !', show_alert=True)
             await crc(channel_id)
             await urc(user_id, channel_id)
             await callback_query.message.delete()
@@ -98,13 +98,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                         [InlineKeyboardButton('Remover legenda', callback_data=f'remove+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'Current Caption is : \n\n{caption} \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(buttons))
+                    await callback_query.edit_message_text(f'Legenda atual é : \n\n{caption} \n\nUse botões abaixo para alterá-lo ou removê-lo.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
                     buttons = [
                         [InlineKeyboardButton('Adicionar Legenda', callback_data=f'add+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- Voltar para inicial', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'No Caption set \n\nUse below button to add it.', reply_markup=InlineKeyboardMarkup(buttons))
+                    await callback_query.edit_message_text(f'Sem legendas definidas \n\nUse o botão abaixo para adicioná-lo.', reply_markup=InlineKeyboardMarkup(buttons))
             elif change == 'buttons':
                 if buttons:
                     _buttons = [
@@ -132,7 +132,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer("Channel doesn't exist in database", show_alert=True)
+                    await callback_query.answer("Canal não existe no banco de dados", show_alert=True)
                     await callback_query.message.delete()
             elif change == 'edit_mode':
                 current_edit_mode = query.split('+')[3]
@@ -145,7 +145,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer("Channel doesn't exist in database", show_alert=True)
+                    await callback_query.answer("Canal não existe no banco de dados", show_alert=True)
                     await callback_query.message.delete()
             elif change == 'sticker':
                 if sticker_id:
@@ -155,13 +155,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                         [InlineKeyboardButton('Remover adesivo', callback_data=f'remove+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'A sticker is already set. See it by tapping \'Show Current Sticker\' button \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(buttons))
+                    await callback_query.edit_message_text(f'Um adesivo já está definido. Veja tocando \'Show Current Sticker\' botão \n\nUse botões abaixo para alterá-lo ou removê-lo.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
                     buttons = [
-                        [InlineKeyboardButton('Add Sticker', callback_data=f'add+{change}+{channel_id}')],
-                        [InlineKeyboardButton('<-- Back to Channel Settings', callback_data=f'home+{channel_id}')]
+                        [InlineKeyboardButton('Adicionar Sticker', callback_data=f'add+{change}+{channel_id}')],
+                        [InlineKeyboardButton('<-- Voltar para configuração do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'No Sticker set \n\nUse below button to add it.', reply_markup=InlineKeyboardMarkup(buttons))
+                    await callback_query.edit_message_text(f'Sem conjunto de adesivos \n\nUse o botão abaixo para adicioná-lo.', reply_markup=InlineKeyboardMarkup(buttons))
             elif change == 'webpage_preview':
                 current = query.split('+')[3]
                 if current.lower() == 'true':
@@ -173,19 +173,19 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer("Channel doesn't exist in database", show_alert=True)
+                    await callback_query.answer("Canal não existe no banco de dados", show_alert=True)
                     await callback_query.message.delete()
     elif query.startswith('add'):
         add = query.split('+')[1]
         channel_id = int(query.split('+')[2])
         try:
             if add == 'caption':
-                data = await bot.ask(user_id, 'Please send the new caption or /cancel the process. Anything you send now will be set as caption so be careful !', timeout=300)
+                data = await bot.ask(user_id, 'Por favor, envie a nova legenda ou /cancel o processo. Qualquer coisa que você enviar agora será definida como legenda, então tenha cuidado !', timeout=300)
                 if data.text.lower() == '/cancel':
-                    await data.reply('Cancelled', quote=True)
+                    await data.reply('Cancelado', quote=True)
                 else:
                     await set_caption(channel_id, data.text.markdown)
-                    await data.reply('Caption set successfully !', quote=True)
+                    await data.reply('Legenda adicionado com sucesso !', quote=True)
                     text, markup, sticker_id = await channel_settings(channel_id, bot)
                     if sticker_id:
                         await callback_query.message.reply_sticker(sticker_id)
@@ -193,7 +193,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                         await callback_query.message.delete()
                         await callback_query.message.reply(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                     else:
-                        await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                        await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                         await crc(channel_id)
                         await urc(user_id, channel_id)
                         await callback_query.message.delete()
@@ -209,15 +209,15 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     "Example: \n`Google - google.com \n"
                     "Telegram - telegram.org | Change - change.org \n"
                     "Wikipedia - wikipedia.org` \n\n\n"
-                    "Now Please **send the buttons** or /cancel the process. \n\n",
+                    "Agora, por favor. **enviar os botões que tu queira no canal embaixo das tuas postagens** ou /cancel o processo. \n\n",
                     timeout=300
                 )
                 while True:
                     if data.text == '/cancel':
-                        await data.reply('Cancelled', quote=True)
+                        await data.reply('Cancelado', quote=True)
                         break
                     if "-" not in data.text:
-                        data = await bot.ask(user_id, 'Wrong Format for Buttons! Please try again.',
+                        data = await bot.ask(user_id, 'Formato errado para botões! Por favor, tente de novo..',
                                              timeout=300)
                     else:
                         given_buttons = await string_to_buttons(data.text)
@@ -232,13 +232,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                                 await callback_query.message.delete()
                                 await callback_query.message.reply(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                             else:
-                                await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                                await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                                 await crc(channel_id)
                                 await urc(user_id, channel_id)
                                 await callback_query.message.delete()
                             break
                         except ButtonUrlInvalid:
-                            data = await bot.ask(user_id, 'Wrong Format for Buttons! Please try again.', timeout=300)
+                            data = await bot.ask(user_id, 'Formato errado para botões! Por favor, tente de novo.', timeout=300)
             elif add == 'position':
                 # Won't happen
                 pass
@@ -246,9 +246,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 # Won't happen
                 pass
             elif add == 'sticker':
-                data = await bot.ask(user_id, 'Please send a sticker.', timeout=300, filters=filters.sticker)
+                data = await bot.ask(user_id, 'Por favor, envie um adesivo.', timeout=300, filters=filters.sticker)
                 await set_sticker(channel_id, data.sticker.file_id)
-                await data.reply('Sticker set successfully !', quote=True)
+                await data.reply('Adesivo selecionado com sucesso !', quote=True)
                 text, markup, sticker_id = await channel_settings(channel_id, bot)
                 if sticker_id:
                     await callback_query.message.reply_sticker(sticker_id)
@@ -256,7 +256,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     await callback_query.message.delete()
                     await callback_query.message.reply(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                    await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                     await crc(channel_id)
                     await urc(user_id, channel_id)
                     await callback_query.message.delete()
@@ -289,7 +289,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                    await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                     await crc(channel_id)
                     await urc(user_id, channel_id)
                     await callback_query.message.delete()
@@ -321,7 +321,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                    await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                     await crc(channel_id)
                     await urc(user_id, channel_id)
                     await callback_query.message.delete()
@@ -333,7 +333,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         sticker_id = await get_sticker(channel_id)
         if sticker_id:
             sticker = await callback_query.message.reply_sticker(sticker_id)
-            await sticker.reply('This is the current sticker', quote=True)
+            await sticker.reply('Este é o adesivo atual', quote=True)
         else:
-            await callback_query.answer('Channel Not Found.', show_alert=True)
+            await callback_query.answer('Canal Não Encontrado.', show_alert=True)
             await callback_query.message.delete()
