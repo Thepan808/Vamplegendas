@@ -69,4 +69,4 @@ async def _add_channels(bot: Client, msg):
                     text = '♦️ Encaminhe a mensagem do canal ou /cancel pra cancelar o processo.'
                     channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id, filters=~filters.me)
     except asyncio.exceptions.TimeoutError:
-        await msg.reply('Process has been automatically cancelled', quote=True)
+        await msg.reply('Processo foi cancelado automaticamente', quote=True)
