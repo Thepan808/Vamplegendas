@@ -7,7 +7,7 @@ from ChannelBot.settings import channel_settings
 from pyrogram.types import InlineKeyboardMarkup
 
 
-@Client.on_message((filters.regex(r'^\+ Add Channels \+$') | filters.command('add')) & filters.private)
+@Client.on_message((filters.regex(r'^♦️Adicionar no canal♦️$') | filters.command('add')) & filters.private)
 async def _add_channels(bot: Client, msg):
     user_id = msg.from_user.id
     bot_id = (await bot.get_me()).id
