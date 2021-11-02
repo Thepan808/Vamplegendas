@@ -112,13 +112,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                         [InlineKeyboardButton('Remover botões de URL', callback_data=f'remove+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'Current Buttons are : \n\n`{buttons}` \n\nUse below buttons to change or remove it.', reply_markup=InlineKeyboardMarkup(_buttons))
+                    await callback_query.edit_message_text(f'Botões atuais são : \n\n`{buttons}` \n\nUse botões abaixo para alterá-lo ou removê-lo.', reply_markup=InlineKeyboardMarkup(_buttons))
                 else:
                     _buttons = [
                         [InlineKeyboardButton('Adicionar Botões', callback_data=f'add+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- Voltar para configuração do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'No Buttons set \n\nUse below button to add them.', reply_markup=InlineKeyboardMarkup(_buttons))
+                    await callback_query.edit_message_text(f'Sem botões definidos \n\nUse o botão abaixo para adicioná-los.', reply_markup=InlineKeyboardMarkup(_buttons))
             elif change == 'position':
                 current_position = query.split('+')[3]
                 if current_position == 'below':
@@ -222,9 +222,9 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                     else:
                         given_buttons = await string_to_buttons(data.text)
                         try:
-                            await data.reply('How they will look !', reply_markup=InlineKeyboardMarkup(given_buttons))
+                            await data.reply('Como eles vão ficar !', reply_markup=InlineKeyboardMarkup(given_buttons))
                             await set_buttons(channel_id, data.text)
-                            await data.reply('Buttons set successfully !', quote=True)
+                            await data.reply('Botões definidos com sucesso !', quote=True)
                             text, markup, sticker_id = await channel_settings(channel_id, bot)
                             if sticker_id:
                                 await callback_query.message.reply_sticker(sticker_id)
@@ -276,7 +276,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             if success:
                 await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await callback_query.edit_message_text('No Channels Found')
+                await callback_query.edit_message_text('Sem canais encontrados')
         else:
             remove = args[1]
             channel_id = int(args[2])
@@ -302,7 +302,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 if text:
                     await callback_query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True)
                 else:
-                    await callback_query.answer('Channel Not Found. Please add again !', show_alert=True)
+                    await callback_query.answer('Canal Não Encontrado. Por favor, adicione novamente !', show_alert=True)
                     await crc(channel_id)
                     await urc(user_id, channel_id)
                     await callback_query.message.delete()
