@@ -3,7 +3,7 @@ from ChannelBot.database.users_sql import get_channels
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 
 
-@Client.on_message((filters.regex(r'^Manage Channels$') | filters.command('channels')) & filters.private)
+@Client.on_message((filters.regex(r'^♦️Gerenciar Canais♦️$') | filters.command('channels')) & filters.private)
 async def _manage(bot: Client, msg):
     success, buttons, text = await manage_channels(msg.from_user.id, bot)
     if success:
