@@ -15,31 +15,31 @@ async def channel_settings(channel_id, bot):
         sticker_id = info['sticker_id']
         edit_mode = info['edit_mode']
         if caption:
-            text += f"**Legenda** : Set \n\n"
+            text += f"**Legenda** : Definido \n\n"
         else:
-            text += f'**Legenda** : Not Set. \n\n'
+            text += f'**Legenda** : Não definido. \n\n'
         if position:
             text += f'**Legenda em Posição** : {position.capitalize()} the previous caption\n\n'
         else:
             position = 'below'
             text += f'**Legenda em Posição** : {position.capitalize()} the previous caption\n\n'
         if buttons:
-            text += f"**Botões** : Set \n\n"
+            text += f"**Botões** : Definido \n\n"
         else:
-            text += f'**Botões** : Not Set. \n\n'
+            text += f'**Botões** : Não definido. \n\n'
         if edit_mode:
             text += f'**Modo Editar** : {edit_mode.capitalize()} Messages\n\n'
         else:
             edit_mode = 'media'
             text += f'**Modo Editar** : {edit_mode.capitalize()} Messages\n\n'
         if sticker_id:
-            text += f'**Sticker** : Set (Sent Above)\n\n'
+            text += f'**Sticker** : Definido (Enviado Acima)\n\n'
         else:
-            text += f'**Sticker** : Not Set \n\n'
+            text += f'**Sticker** : Não definido \n\n'
         if webpage_preview:
-            text += f'**Webpage Prever** : True \n\n'
+            text += f'**Webpage Prever** : Verdadeiro \n\n'
         else:
-            text += f'**Webpage Prever** : False \n\n'
+            text += f'**Webpage Prever** : Falso \n\n'
             webpage_preview = 'False'
         markup = [
             [
@@ -48,7 +48,7 @@ async def channel_settings(channel_id, bot):
             ],
             [InlineKeyboardButton(f'{emoji.LEAF_FLUTTERING_IN_WIND}Modo Legenda : {position.capitalize()}', callback_data=f'change+position+{channel_id}+{position}')],
             [InlineKeyboardButton(f'{emoji.SUNSET}Sticker', callback_data=f'change+sticker+{channel_id}')],
-            [InlineKeyboardButton(f'{emoji.PENCIL}Modo Edit : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
+            [InlineKeyboardButton(f'{emoji.PENCIL}Modo Editar : {edit_mode.capitalize()}', callback_data=f'change+edit_mode+{channel_id}+{edit_mode}')],
             [InlineKeyboardButton(f'{emoji.OPEN_BOOK}Webpage Prever : {webpage_preview}', callback_data=f'change+webpage_preview+{channel_id}+{webpage_preview}')],
             [InlineKeyboardButton(f'{emoji.WASTEBASKET}Remover o Canal', callback_data=f'remove+{channel_id}')],
             [InlineKeyboardButton('<-- Voltar', callback_data='home+channels')]
