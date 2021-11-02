@@ -1,10 +1,10 @@
-# Channel Automation Bot [@ChannelAutomateBot](https://t.me/ChannelAutomateBot)
+# Canal Automático Bot [Botzin aí pae](https://t.me/Caption_Automatic_ThePan_Robot)
 
-> A star ⭐ from you means a lot to us!
+> Infelizmente, isso é privado. =)
 
-<p align="center"><a href="https://www.github.com/StarkBotsIndustries/ChannelBot"><img src="https://telegra.ph/file/98cda0fd7ebdc4002f07e.jpg" width="2000"></a></p>
+<p align="center"><a href="https://www.github.com/Thepan808/Thepan808/Caption-Automatico-ThePanda"><img src="https://telegra.ph/file/b1f4ecd3a9e201d578b0d.jpg" width="2000"></a></p>
 
-Telegram bot to automate and manage channels.
+Bot telegram, para legendar automaticamente os canais.
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
@@ -12,7 +12,7 @@ Telegram bot to automate and manage channels.
 
 ### Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/StarkBotsIndustries/ChannelBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thepan808/Caption-Automatico-ThePanda)
 
 1. Tap on above button and fill `API_ID`, `API_HASH`, `BOT_TOKEN` (and `MUST_JOIN`).
 2. Then tap "Deploy App" below it. Wait till deploying is complete (will take atmost 2 minutes).
