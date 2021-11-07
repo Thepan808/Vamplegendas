@@ -11,6 +11,7 @@ class Data:
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
 💁🏻‍♂️ Agora o bot "remove a tag de encaminhamento" (Caso você mandar uma mensagem encaminhada, ele irá remover.) (*♡∀♡) 
+⚠️ Caso não queira que ele remova as tag, só tirar a opção de postar mensagens e apagar as mensagens! ⚠️
 By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
     """
 
