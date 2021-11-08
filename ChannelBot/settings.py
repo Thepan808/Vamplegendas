@@ -28,10 +28,10 @@ async def channel_settings(channel_id, bot):
         else:
             text += f'**Botões** : Não definido. \n\n'
         if edit_mode:
-            text += f'**Modo Editar** : {edit_mode.capitalize()} Messages\n\n'
+            text += f'**Modo Editar** : {edit_mode.capitalize()} Todas as Mensagens\n\n'
         else:
             edit_mode = 'media'
-            text += f'**Modo Editar** : {edit_mode.capitalize()} Messages\n\n'
+            text += f'**Modo Editar** : {edit_mode.capitalize()} Editar apenas Mídias\n\n'
         if sticker_id:
             text += f'**Sticker** : Definido (Enviado Acima)\n\n'
         else:
