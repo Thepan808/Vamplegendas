@@ -200,13 +200,13 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             elif add == 'buttons':
                 data = await bot.ask(
                     user_id,
-                    "**Buttons Format:** \n\n"
-                    "A button should have a text and a url separated by '`-`'. \ntext - link\n"
-                    "Example: \n`Google - google.com` \n\n"
-                    "For multiple buttons in a single row, use '`|`' Write them in one line!!. \ntext1 - link1 | text2 - link2\n"
-                    "Example: \n`Google - google.com | Telegram - telegram.org`. \n"
-                    "For multiple rows, write them in different lines. \ntext1 - link1\ntext2 - link2\n"
-                    "Example: \n`Google - google.com \n"
+                    "**Formato de botões:** \n\n"
+                    "Um botão deve ter um texto e uma url separado por '`-`'. \nSeu texto - link\n"
+                    "Exemplo: \n`Google - google.com` \n\n"
+                    "Para vários botões em uma única linha, use '`|`' Escreva-os em uma linha!!. \ntexto1 - link1 | texto2 - link2\n"
+                    "Exemplo: \n`Google - google.com | Telegram - telegram.org`. \n"
+                    "Para várias linhas, escreva-as em diferentes linhas. \ntexto1 - link1\ntexto2 - link2\n"
+                    "Exemplo: \n`Google - google.com \n"
                     "Telegram - telegram.org | Change - change.org \n"
                     "Wikipedia - wikipedia.org` \n\n\n"
                     "Agora, por favor. **enviar os botões que tu queira no canal embaixo das tuas postagens** ou /cancel o processo. \n\n",
