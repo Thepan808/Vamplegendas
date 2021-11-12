@@ -13,7 +13,7 @@ async def _add_channels(bot: Client, msg):
     bot_id = (await bot.get_me()).id
     try:
         channel = await bot.ask(user_id,
-                                "♦️ Me adicione no seu canal, como **admin** com permissões 'Postar mensagens' e 'Editar mensagens' e 'Apagar as mensagens' "
+                                "♦️ Me adicione no seu canal, como **admin** com permissões 'Postar mensagens' e 'Editar mensagens' e 'Apagar as mensagens' ♦️ "
                                 "\n\nE no fim, Encaminhe uma mensagem do canal para cá. "
                                 "\n\nCancelar o processo usando /cancel. Mas se não responder em, 5 minutos, irá automaticamente cancelar.", timeout=300)
         while True:
