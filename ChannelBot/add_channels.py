@@ -53,7 +53,7 @@ async def _add_channels(bot: Client, msg):
                                 await channel.reply(text, quote=True)
                             break
                         else:
-                            text = "Sou admin mas não tenho as opções necessárias, como: 'Postar Mensagens' e 'Editar mensagem'. \n\nEnt ademir, encaminha a mensagem do canal de novo ou /cancel o processo."
+                            text = "Sou admin mas não tenho as opções necessárias, como: 'Postar Mensagens' e 'Editar mensagem'. \n\nEntão admin, ou dono do canal... Encaminha a mensagem do canal de novo ou aperte /cancel para cancelar o processo."
                             channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id)
                     except (ChatAdminRequired, UserNotParticipant, ChannelPrivate):
                         text = "Ainda não sou administrador. Por favor, tente encaminhar novamente ou /cancel o processo."
