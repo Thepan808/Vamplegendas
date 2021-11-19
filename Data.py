@@ -56,7 +56,7 @@ By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
 
 Baianor : [Criador](https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx)
 
-Framework : [Pyrogram](docs.pyrogram.org)
+Estrutura : [Pyrogram](docs.pyrogram.org)
 
 Linguagem : [Python](www.python.org)
 
