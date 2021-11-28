@@ -8,7 +8,7 @@ async def _manage(_, msg):
     how += "Se caso algo acontecer, ou não sabe oque está fazendo **Doido da cabeça** bom, me comunique\n\n"
     how += '**Próximo passo** \n'
     how += '1) Tente o que você fez novamente. Se mostrar a mesma coisa inesperada, vá para a etapa 2 \n'
-    how += '2) Entre em contato com @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx e define seu problema **completamente** Bom, aguardo e espero que te ajude.'
+    how += '2) Entre em contato com @The_Panda_Ofc e define seu problema **completamente** Bom, aguardo e espero que te ajude.'
     how += "♦️ Boa sorte ♦️."
     await msg.reply(
         how,
