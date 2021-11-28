@@ -12,7 +12,7 @@ class Data:
 
 💁🏻‍♂️ Agora o bot "remove a tag de encaminhamento" (Caso você mandar uma mensagem encaminhada, ele irá remover.) (*♡∀♡) 
 ⚠️ Caso não queira que ele remova as tag, só tirar a opção de postar mensagens e apagar as mensagens! ⚠️
-By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
+By @The_Panda_Ofc
     """
 
     # Home Button
@@ -22,7 +22,7 @@ By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx")],
+        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/The_Panda_Ofc")],
         [
             InlineKeyboardButton("👀 Quer saber como me usar❔ 👀", callback_data="help"),
             InlineKeyboardButton("💁🏻‍♂️ Sobre 💁🏻‍♂️", callback_data="about")
@@ -54,11 +54,11 @@ By @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
 
 ♦️ Bot que legenda  automaticamente nos canais. By: Baianor. 
 
-Baianor : [Criador](https://t.me/xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx)
+Baianor : [Criador](https://t.me/The_Panda_Ofc)
 
 Estrutura : [Pyrogram](docs.pyrogram.org)
 
 Linguagem : [Python](www.python.org)
 
-Desenvolvedor : @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
+Desenvolvedor : @The_Panda_Ofc
     """
