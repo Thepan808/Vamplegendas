@@ -45,7 +45,7 @@ By @The_Panda_Ofc
 ♦️ Comandos Alternativos ♦️
 /channels - Lista de canais que você adicionou
 /add - Adicionar ao canal
-/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @xPV_D4_M34_S4Y0R1_D3M0N_CR4ZZYx
+/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @The_Panda_Ofc
     """
 
     # About Message
