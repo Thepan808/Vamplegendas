@@ -6,17 +6,13 @@ class Data:
     START = """
 (ಥ﹏ಥ) Olá {}
 
-
 (￣▽￣)ノ Bem vindo(a) ao {}
-
 
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
-💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele:
+💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: ♦️ @RabiscoS_MeuS_77 |
 
-♦️ @RabiscoS_MeuS_77 ← 
-
-→ @GR4V3_S4D_CRAZZY ♦️
+→ @GR4V3_S4D_CRAZZY ♦️ |
 
 By @The_Panda_Ofc 
     """
