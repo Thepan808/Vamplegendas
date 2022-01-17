@@ -11,6 +11,7 @@ class Data:
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
 💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → [Aperta em leitura rápida](https://telegra.ph/-01-17-648) 
+
 ♦️
     """
 
