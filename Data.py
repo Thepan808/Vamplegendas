@@ -10,9 +10,7 @@ class Data:
 
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
-💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: ♦️ @RabiscoS_MeuS_77 |
-
-→ @GR4V3_S4D_CRAZZY ♦️ |
+💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → 
 
 By @The_Panda_Ofc 
     """
