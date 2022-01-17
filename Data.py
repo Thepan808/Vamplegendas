@@ -10,14 +10,13 @@ class Data:
 
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
-💁🏻‍♂️ Agora o bot "remove a tag de encaminhamento" (Caso você mandar uma mensagem encaminhada, ele irá remover.) (*♡∀♡) 
-⚠️ Caso não queira que ele remova as tag, só tirar a opção de postar mensagens e apagar as mensagens! ⚠️
+💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: @RabiscoS_MeuS_77 ← → @GR4V3_S4D_CRAZZY
 By @The_Panda_Ofc
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text=":/ Voltar", callback_data="home")],
+        [InlineKeyboardButton(text="🤨 Voltar", callback_data="home")],
     ]
 
     # Rest Buttons
