@@ -10,9 +10,9 @@ class Data:
 
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
-💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → Aperta em leitura rápida.
+💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → Aperta [aqui](t.me/https://telegra.ph/-01-17-648) e veja mais!
 
-[♦️](https://telegra.ph/-01-17-648)
+♦️
     """
 
     # Home Button
