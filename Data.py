@@ -10,7 +10,7 @@ class Data:
 
 (⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
 
-💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → Aperta [aqui](t.me/https://telegra.ph/-01-17-648) e veja mais!
+💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → Aperta em criador e veja mais!
 
 ♦️
     """
@@ -22,7 +22,7 @@ class Data:
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/The_Panda_Ofc")],
+        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://telegra.ph/-01-17-648")],
         [
             InlineKeyboardButton("👀 Quer saber como me usar❔ 👀", callback_data="help"),
             InlineKeyboardButton("💁🏻‍♂️ Sobre 💁🏻‍♂️", callback_data="about")
