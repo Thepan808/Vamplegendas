@@ -19,10 +19,10 @@ async def channel_settings(channel_id, bot):
         else:
             text += f'**Legenda** : Não definido. \n\n'
         if position:
-            text += f'**Legenda em Posição** : {position.capitalize()} the previous caption\n\n'
+            text += f'**Legenda em Posição** : {position.capitalize()} a legenda pra cima\n\n'
         else:
             position = 'below'
-            text += f'**Legenda em Posição** : {position.capitalize()} the previous caption\n\n'
+            text += f'**Legenda em Posição** : {position.capitalize()} a legenda inferior pra baixo\n\n'
         if buttons:
             text += f"**Botões** : Definido \n\n"
         else:
