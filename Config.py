@@ -19,7 +19,7 @@ else:
     # Fill the Values
     API_ID = 4954361
     API_HASH = "43a786a8548a30f9d6887e36d53c0e64"
-    BOT_TOKEN = "5947964937:AAEdE-cc7UwkqMncf1pt73pqNrDAOVKd1OM"
+    BOT_TOKEN = "5986540458:AAFua6xvuSLEGb7jv8F7AhgMbIg5QvFp4IA"
     DATABASE_URL = "postgres://oicdlgic:jPXX3stMqWqajvXhhZrgC5YeLSpgTu6_@babar.db.elephantsql.com/oicdlgic"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = "botssaved"
