@@ -22,7 +22,7 @@ class Data:
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/botssaved")],
+        [InlineKeyboardButton("🤖 Bot Secundário", url="https://t.me/root_reserved_bot")],
         [
             InlineKeyboardButton("👀 Como funciona❔ 👀", callback_data="help"),
             InlineKeyboardButton("👑 Sobre 👑", callback_data="about")
