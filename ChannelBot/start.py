@@ -15,7 +15,7 @@ async def start(bot, msg):
 	)
 	await bot.send_message(
 		msg.chat.id,
-		'♦️ Use os botões abaixo para interagir comigo ♦️',
+		'👑 Use os botões abaixo para interagir comigo 👑',
 		reply_markup=ReplyKeyboardMarkup(
 			[
 				['♦️Adicionar no canal♦️'],
