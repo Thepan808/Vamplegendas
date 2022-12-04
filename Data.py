@@ -4,31 +4,31 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-(ಥ﹏ಥ) Olá {}
+♞⬝ Olá meu caro usuário {}
 
-(￣▽￣)ノ Bem vindo(a) ao {}
+👑 Bem vindo(a) ao {}
 
-(⌒_⌒;) Você acaba-se de se encontrar uma forma de editar? Então você chegou e achou seu destino!
+🎖️ Aproveite o uso do bot, e lembre-se caso remover o bot em algum canal, aperte na opção de remover!
 
-💁🏻‍♂️ Entre nos canais, para atualizações do bot, e avisos sobre ele: → Aperta em criador e veja mais!
+💁🏻‍♂️ Entre no canal de notícias, para atualizações do bot, e avisos sobre ele: → Aperta em criador!
 
 ♦️
     """
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton(text="🤨 Voltar", callback_data="home")],
+        [InlineKeyboardButton(text="👑 Voltar", callback_data="home")],
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://telegra.ph/-01-17-648")],
+        [InlineKeyboardButton("👨🏻‍💻 Criador 👨🏻‍💻", url="https://t.me/botssaved")],
         [
-            InlineKeyboardButton("👀 Quer saber como me usar❔ 👀", callback_data="help"),
-            InlineKeyboardButton("💁🏻‍♂️ Sobre 💁🏻‍♂️", callback_data="about")
+            InlineKeyboardButton("👀 Como funciona❔ 👀", callback_data="help"),
+            InlineKeyboardButton("👑 Sobre 👑", callback_data="about")
         ],
-        [InlineKeyboardButton("♥ Canal ♥", url="https://t.me/GR4V3_S4D_CRAZZY")],
-        [InlineKeyboardButton("♦️ Grupo ♦️", url="https://t.me/blazer808_Stay")],
+        [InlineKeyboardButton("🎖️ Canal 🎖️", url="https://t.me/botssaved")],
+        [InlineKeyboardButton("🎖️ Criador 🎖️", url="https://t.me/the_panda_official")],
     ]
 
     # Help Message
@@ -45,20 +45,20 @@ class Data:
 ♦️ Comandos Alternativos ♦️
 /channels - Lista de canais que você adicionou
 /add - Adicionar ao canal
-/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @The_Panda_Ofc
+/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @The_Panda_Official
     """
 
     # About Message
     ABOUT = """
 **Sobre o bot** 
 
-♦️ Bot que legenda  automaticamente nos canais. By: Baianor. 
+♦️ Bot que legenda  automaticamente nos canais. 
 
-Baianor : [Criador](https://t.me/The_Panda_Ofc)
+Baianor : [Criador](https://t.me/The_Panda_Official)
 
 Estrutura : [Pyrogram](docs.pyrogram.org)
 
 Linguagem : [Python](www.python.org)
 
-Desenvolvedor : @The_Panda_Ofc
+Desenvolvedor : @The_Panda_Official
     """
