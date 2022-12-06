@@ -13,11 +13,11 @@ from ChannelBot.database.channel_sql import (
 from ChannelBot.string_to_buttons import string_to_buttons
 
 
-# def all_channels():
-#     channels = SESSION.query(Channel).all()
-#     channels_ids = [channel.channel_id for channel in channels]
-#     SESSION.close()
-#     return channels_ids
+  def all_channels():
+      channels = SESSION.query(Channel).all()
+      channels_ids = [channel.channel_id for channel in channels]
+      SESSION.close()
+      return channels_ids
 
 
 @Client.on_message(filters.channel & ~filters.edited & ~filters.forwarded)
