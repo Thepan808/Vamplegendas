@@ -20,7 +20,7 @@ else:
     API_ID = 4954361
     API_HASH = "43a786a8548a30f9d6887e36d53c0e64"
     BOT_TOKEN = "5901798571:AAE67VHi2QvUUsIqlGuxKUuhd7gwwECYbMI"
-    DATABASE_URL = "postgres://oicdlgic:jPXX3stMqWqajvXhhZrgC5YeLSpgTu6_@babar.db.elephantsql.com/oicdlgic"
+    DATABASE_URL = "postgres://humcunot:y_Q5oXwAnUMQ-XRCPJBIA5AvvYTNXCpJ@motty.db.elephantsql.com/humcunot"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = "botssaved"
     if MUST_JOIN.startswith("@"):
