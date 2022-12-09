@@ -28,9 +28,20 @@ async def _add_channels(bot: Client, msg):
                                 success, info = await get_channel_info(channel_id)
                                 if success:
                                     try:
-                                        await uac(user_id, channel_id)
-                                        await cac(channel_id, user_id)
-                                        await channel.reply("Obrigado por me escolher. . . Lembre-se! Caso você tirar o bot em algum canal, remova o bot na opção Remover canal! Agora comece a gerenciar este canal personalizando as configurações abaixo.", quote=True)
+                                        admin_chat_member = await bot.get_chat_member(channel_id, info['admin_id'])
+                                    except (ChatAdminRequired, UserNotParticipant, ChannelPrivate):
+                                        await remove_channel(info['admin_id'], channel_id)
+                                        admin_chat_member = None
+                                else:
+                                    admin_chat_member = None
+                                if success and admin_chat_member and admin_chat_member.status in ['creator', 'administrator']:  # Already added channel and admin still admin.
+                                    admin = await bot.get_users(info['admin_id'])
+                                    text = f"Este canal já é adicionado por {admin.mention}"
+                                    await channel.reply(text, quote=True)
+                                else:
+                                    await uac(user_id, channel_id)
+                                    await cac(channel_id, user_id)
+                                    await channel.reply("Obrigado por me escolher. . . Lembre-se! Caso você tirar o bot em algum canal, remova o bot na opção Remover canal! Agora comece a gerenciar este canal personalizando as configurações abaixo.", quote=True)
                                     text, markup, _ = await channel_settings(channel_id, bot)
                                     if text:
                                         await msg.reply(text, reply_markup=InlineKeyboardMarkup(markup))
