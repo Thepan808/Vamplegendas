@@ -27,15 +27,10 @@ async def _add_channels(bot: Client, msg):
                             if chat_member_user.status in ['creator', 'administrator']:  # Don't allow non-admins.
                                 success, info = await get_channel_info(channel_id)
                                 if success:
-                                    try:
-                                        admin_chat_member = await bot.get_chat_member(channel_id, info['administrator'])
-                                    except (ChatAdminRequired, UserNotParticipant, ChannelPrivate):
-                                        await remove_channel(info['administrator'], channel_id)
-                                        admin_chat_member = None
-                                else:
-                                    await uac(user_id, channel_id)
-                                    await cac(channel_id, user_id)
-                                    await channel.reply("Obrigado por me escolher. . . Lembre-se! Caso você tirar o bot em algum canal, remova o bot na opção Remover canal! Agora comece a gerenciar este canal personalizando as configurações abaixo.", quote=True)
+                                    else:
+                                        await uac(user_id, channel_id)
+                                        await cac(channel_id, user_id)
+                                        await channel.reply("Obrigado por me escolher. . . Lembre-se! Caso você tirar o bot em algum canal, remova o bot na opção Remover canal! Agora comece a gerenciar este canal personalizando as configurações abaixo.", quote=True)
                                     text, markup, _ = await channel_settings(channel_id, bot)
                                     if text:
                                         await msg.reply(text, reply_markup=InlineKeyboardMarkup(markup))
