@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-😼•👑 Olá meu caro usuário {}
+🧛‍♂️ Olá meu caro usuário {}
 
 🇧🇷 Bem vindo(a) ao {}
 
@@ -25,10 +25,10 @@ class Data:
         [InlineKeyboardButton("🤖 Bot Principal", url="https://t.me/Demonick_xyz_robot")],
         [
             InlineKeyboardButton("👀 Como funciona❔ 👀", callback_data="help"),
-            InlineKeyboardButton("🤠 Sobre 👑", callback_data="about")
+            InlineKeyboardButton("🧛‍♂️ Sobre 🧛‍♂️", callback_data="about")
         ],
         [InlineKeyboardButton("🎖️ Canal 🎖️", url="https://t.me/botssaved")],
-        [InlineKeyboardButton("🏆 Criador 🏆", url="https://t.me/the_panda_official")],
+        [InlineKeyboardButton("🧛‍♂️ Criador 🧛‍♂️", url="https://t.me/the_panda_official")],
     ]
 
     # Help Message
@@ -45,7 +45,7 @@ class Data:
 ♦️ Comandos Alternativos ♦️
 /channels - Lista de canais que você adicionou
 /add - Adicionar ao canal
-/report - Reportar o Problema, chama-se no pv e sobre o assunto senão leva spam! @The_Panda_Official
+/report - Reportar o Problema, chama-se no pv e sobre o assunto do problema. @The_Panda_Official
     """
 
     # About Message
