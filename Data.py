@@ -4,13 +4,13 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-🧛‍♂️ Olá meu caro usuário {}
+🛸 Olá meu caro usuário {}
 
 🇧🇷 Bem vindo(a) ao {}
 
 ⌚ Aproveite o uso do bot, e lembre-se caso remover o bot em algum canal, aperte na opção de remover!
 
-⚠️ Entre no canal de notícias, para atualizações do bot, e avisos sobre ele: → Aperta no canal e entre!
+⚠️ Entre no canal de bots, para atualizações do bot, e avisos sobre ele e outros bots: → Aperta no canal e entre!
 
 ♦️
     """
@@ -25,9 +25,9 @@ class Data:
         [InlineKeyboardButton("🤖 Bot Principal", url="https://t.me/Demonick_xyz_robot")],
         [
             InlineKeyboardButton("👀 Como funciona❔ 👀", callback_data="help"),
-            InlineKeyboardButton("🧛‍♂️ Sobre 🧛‍♂️", callback_data="about")
+            InlineKeyboardButton("🛸 Sobre 🛸", callback_data="about")
         ],
-        [InlineKeyboardButton("🎖️ Canal 🎖️", url="https://t.me/botssaved")],
+        [InlineKeyboardButton("🚀 Canal 🚀", url="https://t.me/botssaved")],
         [InlineKeyboardButton("🧛‍♂️ Criador 🧛‍♂️", url="https://t.me/the_panda_official")],
     ]
 
