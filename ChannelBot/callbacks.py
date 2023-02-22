@@ -155,7 +155,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                         [InlineKeyboardButton('Remover adesivo', callback_data=f'remove+{change}+{channel_id}')],
                         [InlineKeyboardButton('<-- De volta às configurações do canal', callback_data=f'home+{channel_id}')]
                     ]
-                    await callback_query.edit_message_text(f'Um adesivo já está definido. Veja tocando \'Show Current Sticker\' botão \n\nUse botões abaixo para alterá-lo ou removê-lo.', reply_markup=InlineKeyboardMarkup(buttons))
+                    await callback_query.edit_message_text(f'Um adesivo já está definido. Veja tocando \'Mostrar adesivo atual\' botão \n\nUse botões abaixo para alterá-lo ou removê-lo.', reply_markup=InlineKeyboardMarkup(buttons))
                 else:
                     buttons = [
                         [InlineKeyboardButton('Adicionar Sticker', callback_data=f'add+{change}+{channel_id}')],
