@@ -34,7 +34,7 @@ class Data:
     # Help Message
     HELP = """
 ♦️ Bom a forma mais fácil de me usar ♦️.
-♦️ Para me adicionar no seu canal, use o botão 'Add Channel' ou, use `/add` comando. ♦️
+♦️ Para me adicionar no seu canal, use o botão 'Adicionar canal' ou, use `/add` comando. ♦️
 
 ♦️ **Comandos do bot** ♦️
 
