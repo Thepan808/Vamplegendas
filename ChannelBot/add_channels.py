@@ -13,7 +13,7 @@ async def _add_channels(bot: Client, msg):
     bot_id = (await bot.get_me()).id
     try:
         channel = await bot.ask(user_id,
-                                "👑 Me adicione no seu canal, como **admin** com permissões 'Postar mensagens' e 'Editar mensagens' e 'Apagar as mensagens' 👑 "
+                                "🛸 Me adicione no seu canal, como **admin** com permissões 'Postar mensagens' e 'Editar mensagens' e 'Apagar as mensagens' 🛸 "
                                 "\n\nE no fim, Encaminhe uma mensagem do canal para cá. "
                                 "\n\nCancelar o processo usando /cancel. Mas se não responder em, 5 minutos, irá automaticamente cancelar.", timeout=300)
         while True:
@@ -66,7 +66,7 @@ async def _add_channels(bot: Client, msg):
                     await channel.reply('Cancelado ao `Adicionar o Canal` o Processo!', quote=True)
                     break
                 else:
-                    text = '👑 Encaminhe a mensagem do canal ou /cancel pra cancelar o processo.'
+                    text = '🛸 Encaminhe a mensagem do canal ou /cancel pra cancelar o processo.'
                     channel = await bot.ask(user_id, text, timeout=300, reply_to_message_id=channel.message_id, filters=~filters.me)
     except asyncio.exceptions.TimeoutError:
         await msg.reply('Processo foi cancelado automaticamente', quote=True)
