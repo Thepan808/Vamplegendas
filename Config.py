@@ -22,6 +22,6 @@ else:
     BOT_TOKEN = "5111552136:AAH-1j9xSn6XvxzPm7DHM1_6nchfXW9r7tE"
     DATABASE_URL = "postgres://sjbigejk:5DexFs6Is0tRBMApihfGUfrrTQdSLraE@motty.db.elephantsql.com/sjbigejk"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
-    MUST_JOIN = "botslogsofc"
+    MUST_JOIN = "zzvvbr"
     if MUST_JOIN.startswith("@"):
         MUST_JOIN = MUST_JOIN[1:]
