@@ -8,7 +8,7 @@ class Data:
 
 🇧🇷 Bem vindo(a) ao {}
 
-⌚ Aproveite o uso do bot, e lembre-se caso remover o bot em algum canal, aperte na opção de remover!
+🌀 Aproveite o uso do bot, e lembre-se caso remover o bot em algum canal, aperte na opção de remover!
 
 ⚠️ Entre no canal de bots, para atualizações do bot, e avisos sobre ele e outros bots: → E bom uso! 🂼
 
